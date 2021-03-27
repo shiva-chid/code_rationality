@@ -1,0 +1,1463 @@
+##########################
+begin first computation
+the first part of this code computes the action of G=PSp_4(F_3)
+on M = H^2(X,Z) simeq Z^61. The explicit matrices x and y giving
+this action are printed below
+[Warning! matrices in Magma act on the right!]
+[-4 2 2 -1 2 -1 -4 5 2 -5 2 2 5 2 -5 -2 8 -1 -4 2 -1 -1 3 -1 1 -4 -4 -1 -1 1 3 1 -1 1 -1 -1 0 0 -3 1 1 1 -1 2 -2 -2 1 -3
+    3 0 5 -1 -1 3 2 -1 0 -2 -1 -4 2]
+[0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[-3 2 2 -1 2 0 -3 4 1 -3 1 1 3 3 -4 -1 7 -1 -3 2 -2 -1 2 -1 1 -4 -4 -1 -1 1 3 1 -1 1 -1 -1 0 0 -3 1 1 1 -1 2 -2 -2 1 -2 
+    2 0 4 0 -1 3 2 -1 -1 -1 -1 -3 1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[-6 -3 6 -3 3 9 0 -6 -3 6 -6 3 -3 3 6 3 -3 0 -3 0 3 -1 -3 -2 0 3 -6 2 -3 1 -3 3 0 -2 -3 -2 3 0 0 1 3 2 -1 6 4 0 3 0 -2 0
+    -4 2 -3 -2 0 -3 0 7 -3 -1 -1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 1 1 -1 -1 1 -1 0 -1 -1 2 1 -2 1 0 -1 1 0 0 0 0 1 1 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 -1 0 -1 0 0 -1 
+    -1 0 0 1 0 1 0]
+[-6 6 3 0 3 -9 -12 18 9 -18 12 0 15 3 -18 -9 24 0 -6 3 -6 -2 9 -1 3 -12 -6 -4 -3 3 9 1 -3 4 0 -1 -3 3 -9 2 0 1 -2 0 -8
+    -5 -1 -8 11 -2 16 -3 0 9 5 1 -1 -10 2 -11 5]
+[-6 0 6 -3 3 6 -3 -3 -3 3 -3 3 0 3 3 3 3 0 -6 0 0 -1 0 -2 0 0 -6 1 -3 2 0 3 -2 0 -3 -2 3 0 -3 1 3 2 -1 6 2 -1 3 -2 0 0 0
+    1 -3 0 1 -3 -1 5 -3 -2 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 3 0 0 0 -3 -3 6 3 -6 3 0 3 3 -6 -3 9 0 -3 3 -3 -1 3 0 1 -6 -3 -2 0 1 3 0 -1 2 0 -1 0 0 -3 1 0 1 0 0 -3 -2 0 -2 3 0 5 
+    -1 0 4 3 0 -1 -4 0 -3 1]
+[0 3 0 1 1 -3 -3 5 2 -5 3 -1 4 1 -5 -1 8 -1 -2 2 -3 -1 3 0 1 -5 -2 -2 0 1 3 0 -1 2 0 0 -1 0 -3 0 0 0 0 0 -3 -2 0 -2 3 0 
+    5 -1 0 3 2 0 -1 -3 0 -2 1]
+[0 0 0 0 0 1 1 -1 -1 1 -2 1 -1 0 1 2 -1 -1 -1 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 -1 0 0 0 0 0 1 0 0 1 0 -1 1 -1 0 0 0 0
+    -1 0 1 -1 1 0]
+[3 3 -3 2 -1 -7 -1 7 4 -7 5 -2 4 -1 -7 -3 6 0 1 1 -3 0 3 1 1 -4 2 -2 2 0 3 -2 0 2 2 1 -3 0 -1 0 -2 -1 0 -4 -4 -1 -2 -1 3
+    0 5 -2 2 3 1 2 0 -6 2 -1 1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 -3 0 -3 0 6 3 -6 -3 6 -6 3 -6 0 6 3 -9 0 0 0 3 1 -3 0 -1 6 0 2 0 -1 -3 0 1 -2 0 -1 3 -3 3 0 1 1 0 3 4 1 2 2 -5 1 -6 1
+    0 -3 -1 -1 1 5 -2 2 -1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[3 -6 0 0 -3 9 9 -15 -6 15 -9 0 -12 -3 15 6 -21 3 6 -6 6 2 -9 0 -2 12 6 4 0 -2 -9 0 2 -4 0 1 3 0 6 -1 0 0 1 0 8 5 0 6 -8
+    0 -14 3 0 -9 -5 0 1 9 0 8 -4]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+    0]
+
+[-3 2 2 -1 2 0 -3 4 1 -3 1 1 3 3 -4 -1 7 -1 -3 2 -2 -1 2 -1 1 -4 -4 -1 -1 1 3 1 -1 1 -1 -1 0 0 -3 1 1 1 -1 2 -2 -2 1 -2 
+    2 0 4 0 -1 3 2 -1 -1 -1 -1 -3 1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 1 1 -1 -1 1 -1 0 -1 -1 2 1 -2 1 0 -1 1 0 0 0 0 1 1 0 0 0 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 -1 0 -1 0 0 -1 
+    -1 0 0 1 0 1 0]
+[-4 1 3 -1 2 1 -3 3 1 -2 1 2 3 2 -3 -1 5 -1 -3 1 -1 -1 1 -1 1 -2 -4 0 -1 1 2 1 -1 0 -1 -1 0 0 -2 1 1 1 -1 2 -1 -2 1 -2 2
+    0 3 0 -1 2 1 -1 0 0 -1 -3 1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[-2 4 0 1 1 -8 -6 12 7 -12 8 -1 10 2 -12 -7 14 -1 -2 2 -4 -1 5 0 2 -8 -2 -3 0 1 6 0 -1 2 1 0 -3 2 -4 1 -1 0 -1 -2 -6 -3 
+    -2 -4 7 -1 10 -2 1 6 3 1 0 -8 2 -6 3]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[-4 2 2 -1 2 -1 -4 5 2 -5 2 2 5 2 -5 -2 8 -1 -4 2 -1 -1 3 -1 1 -4 -4 -1 -1 1 3 1 -1 1 -1 -1 0 0 -3 1 1 1 -1 2 -2 -2 1 -3
+    3 0 5 -1 -1 3 2 -1 0 -2 -1 -4 2]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[-6 -3 6 -3 3 9 0 -6 -3 6 -6 3 -3 3 6 3 -3 0 -3 0 3 -1 -3 -2 0 3 -6 2 -3 1 -3 3 0 -2 -3 -2 3 0 0 1 3 2 -1 6 4 0 3 0 -2 0
+    -4 2 -3 -2 0 -3 0 7 -3 -1 -1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0
+    0]
+[3 3 -3 2 -1 -7 -1 7 4 -7 5 -2 4 -1 -7 -3 6 0 1 1 -3 0 3 1 1 -4 2 -2 2 0 3 -2 0 2 2 1 -3 0 -1 0 -2 -1 0 -4 -4 -1 -2 -1 3
+    0 5 -2 2 3 1 2 0 -6 2 -1 1]
+[0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    1]
+[0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+    0]
+[0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 -3 3 0 0 9 6 -12 -6 12 -6 0 -9 0 12 6 -12 3 3 -3 3 0 -6 -1 -1 6 0 3 -3 0 -6 1 1 -2 -3 0 3 0 3 0 1 1 1 0 6 3 1 4 -5 0 
+    -9 3 -3 -6 -3 -1 -1 8 -1 5 -4]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 -1 1 1 0 0 -1 1 -2 1 -1 1 0 1 1 -2 -2 2 0 0 0 0 0 0 -2 0 1 0 1 0 0 0 0 -1 1 -2 0 0 1 0 0 2 0 -1 1 0 -1 1 0 0 0 1 
+    1 -1 0 1 -2 0 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+    0]
+[0 3 0 0 0 -3 -3 6 3 -6 3 0 3 3 -6 -3 9 0 -3 3 -3 -1 3 0 1 -6 -3 -2 0 1 3 0 -1 2 0 -1 0 0 -3 1 0 1 0 0 -3 -2 0 -2 3 0 5 
+    -1 0 4 3 0 -1 -4 0 -3 1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 -3 -3 3 3 -3 3 0 3 0 -3 -3 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 2 -1 2 -1 1 1 
+    1 1 1 -2 1 -2 1]
+[0 -3 0 -1 0 5 3 -7 -3 7 -5 1 -5 -2 7 3 -9 0 1 -2 4 1 -3 0 -1 6 2 2 0 -1 -4 0 1 -2 0 0 2 -1 3 -1 1 0 0 2 4 2 1 2 -4 0 -6
+    1 0 -4 -2 -1 1 5 -1 3 -1]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[-6 6 3 0 3 -9 -12 18 9 -18 12 0 15 3 -18 -9 24 0 -6 3 -6 -2 9 -1 3 -12 -6 -4 -3 3 9 1 -3 4 0 -1 -3 3 -9 2 0 1 -2 0 -8
+    -5 -1 -8 11 -2 16 -3 0 9 5 1 -1 -10 2 -11 5]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[-6 0 6 -3 3 6 -3 -3 -3 3 -3 3 0 3 3 3 3 0 -6 0 0 -1 0 -2 0 0 -6 1 -3 2 0 3 -2 0 -3 -2 3 0 -3 1 3 2 -1 6 2 -1 3 -2 0 0 0
+    1 -3 0 1 -3 -1 5 -3 -2 0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[3 -6 0 0 -3 9 9 -15 -6 15 -9 0 -12 -3 15 6 -21 3 6 -6 6 2 -9 0 -2 12 6 4 0 -2 -9 0 2 -4 0 1 3 0 6 -1 0 0 1 0 8 5 0 6 -8
+    0 -14 3 0 -9 -5 0 1 9 0 8 -4]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+    0]
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+    0]
+Here are some representations of G
+[Q]=[V_1]
+( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
+[V_15]
+( 15, -1, -1, 6, 6, 3, 0, 3, -1, 0, 2, 2, -1, -1, 2, -1, 0, 0, 0, 0 )
+[V_20]
+( 20, 4, 4, 2, 2, 5, -1, 0, 0, 0, -2, -2, 1, 1, 1, 1, -1, -1, 0, 0 )
+[chi_24]
+( 24, 8, 0, 6, 6, 0, 3, 0, 0, -1, 2, 2, 2, 2, -1, 0, 0, 0, 0, 0 )
+The permutation representation Q[G/G40]=[Q]+[chi_24]+[V_15]
+( 40, 8, 0, 13, 13, 4, 4, 4, 0, 0, 5, 5, 2, 2, 2, 0, 1, 1, 1, 1 )
+The permutation representation Q[G/G45]=[Q]+[chi_24]+[V_20]
+( 45, 13, 5, 9, 9, 6, 3, 1, 1, 0, 1, 1, 4, 4, 1, 2, 0, 0, 1, 1 )
+The representation Q[G/G45] + Q[G/G40] - [chi_24]
+( 61, 13, 5, 16, 16, 10, 4, 5, 1, 1, 4, 4, 4, 4, 4, 2, 1, 1, 2, 2 )
+This should agree with [M tensor Q] which is
+( 61, 13, 5, 16, 16, 10, 4, 5, 1, 1, 4, 4, 4, 4, 4, 2, 1, 1, 2, 2 )
+##########################
+In this computation, we determine for which subgroups P of G
+One has H^1(P,M) =/= 1
+##########################
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 6, 3, 8640 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 10, 4, 6480 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 11, 4, 6480 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 14, 6, 4320 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 17, 6, 4320 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 21, 9, 2880 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 3, 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 22, 9, 2880 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 3, 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 27, 8, 3240 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 28, 8, 3240 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 31, 8, 3240 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 32, 8, 3240 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 33, 8, 3240 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 36, 12, 2160 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 42, 18, 1440 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 3, 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 46, 18, 1440 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 50, 27, 960 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 51, 27, 960 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 3, 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 52, 27, 960 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 55, 16, 1620 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 56, 16, 1620 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 2 over Integer Ring
+Column moduli:
+[ 2, 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 57, 16, 1620 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 67, 24, 1080 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 6 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 68, 24, 1080 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 71, 36, 720 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 72, 36, 720 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 75, 54, 480 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 78, 60, 432 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 79, 81, 320 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 81, 32, 810 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 86, 48, 540 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 2 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 91, 108, 240 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 106, 324, 80 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+********************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 107, 360, 72 ]
+the group H^1(H,M) is equal to
+Full Quotient RSpace of degree 1 over Integer Ring
+Column moduli:
+[ 3 ]
+the group H^1(H,M^vee) is equal to
+Full Quotient RSpace of degree 0 over Integer Ring
+Column moduli:
+[ ]
+##########################
+In this second computation, for all H in G, find lcm of H^1(P,M) for
+P inside H, and lcm of H^1(P,M^vee) for P inside H
+##########################
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 2, 2, 12960 ]
+<2, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 3, 2, 12960 ]
+<2, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 4, 3, 8640 ]
+<3, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 5, 3, 8640 ]
+<3, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 6, 3, 8640 ]
+<3, 1>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 7, 5, 5184 ]
+<5, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 8, 4, 6480 ]
+<4, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 9, 4, 6480 ]
+<4, 2>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 10, 4, 6480 ]
+<4, 2>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 11, 4, 6480 ]
+<4, 2>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 12, 4, 6480 ]
+<4, 2>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 13, 4, 6480 ]
+<4, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 14, 6, 4320 ]
+<6, 1>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 15, 6, 4320 ]
+<6, 2>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 16, 6, 4320 ]
+<6, 2>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 17, 6, 4320 ]
+<6, 1>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 18, 6, 4320 ]
+<6, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 19, 6, 4320 ]
+<6, 2>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 20, 6, 4320 ]
+<6, 2>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 21, 9, 2880 ]
+<9, 2>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 22, 9, 2880 ]
+<9, 2>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 23, 9, 2880 ]
+<9, 2>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 24, 9, 2880 ]
+<9, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 25, 10, 2592 ]
+<10, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 26, 8, 3240 ]
+<8, 4>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 27, 8, 3240 ]
+<8, 5>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 28, 8, 3240 ]
+<8, 5>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 29, 8, 3240 ]
+<8, 5>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 30, 8, 3240 ]
+<8, 2>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 31, 8, 3240 ]
+<8, 2>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 32, 8, 3240 ]
+<8, 3>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 33, 8, 3240 ]
+<8, 3>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 34, 8, 3240 ]
+<8, 3>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 35, 12, 2160 ]
+<12, 3>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 36, 12, 2160 ]
+<12, 3>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 37, 12, 2160 ]
+<12, 4>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 38, 12, 2160 ]
+<12, 5>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 39, 12, 2160 ]
+<12, 1>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 40, 12, 2160 ]
+<12, 2>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 41, 12, 2160 ]
+<12, 4>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 42, 18, 1440 ]
+<18, 4>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 43, 18, 1440 ]
+<18, 3>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 44, 18, 1440 ]
+<18, 3>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 45, 18, 1440 ]
+<18, 3>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 46, 18, 1440 ]
+<18, 3>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 47, 18, 1440 ]
+<18, 3>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 48, 18, 1440 ]
+<18, 5>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 49, 20, 1296 ]
+<20, 3>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 50, 27, 960 ]
+<27, 5>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 51, 27, 960 ]
+<27, 3>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 52, 27, 960 ]
+<27, 4>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 53, 16, 1620 ]
+<16, 14>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 54, 16, 1620 ]
+<16, 13>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 55, 16, 1620 ]
+<16, 11>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 56, 16, 1620 ]
+<16, 3>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 57, 16, 1620 ]
+<16, 11>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 58, 16, 1620 ]
+<16, 3>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 59, 24, 1080 ]
+<24, 3>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 60, 24, 1080 ]
+<24, 13>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 61, 24, 1080 ]
+<24, 3>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 62, 24, 1080 ]
+<24, 3>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 63, 24, 1080 ]
+<24, 11>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 64, 24, 1080 ]
+<24, 13>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 65, 24, 1080 ]
+<24, 13>
+[ 6, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 66, 24, 1080 ]
+<24, 12>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 67, 24, 1080 ]
+<24, 12>
+[ 6, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 68, 24, 1080 ]
+<24, 12>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 69, 24, 1080 ]
+<24, 8>
+[ 1, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 70, 36, 720 ]
+<36, 10>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 71, 36, 720 ]
+<36, 10>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 72, 36, 720 ]
+<36, 9>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 73, 36, 720 ]
+<36, 12>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 74, 54, 480 ]
+<54, 8>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 75, 54, 480 ]
+<54, 13>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 76, 54, 480 ]
+<54, 12>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 77, 60, 432 ]
+<60, 5>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 78, 60, 432 ]
+<60, 5>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 79, 81, 320 ]
+<81, 7>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 80, 32, 810 ]
+<32, 49>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 81, 32, 810 ]
+<32, 6>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 82, 32, 810 ]
+<32, 27>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 83, 48, 540 ]
+<48, 30>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 84, 48, 540 ]
+<48, 49>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 85, 48, 540 ]
+<48, 33>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 86, 48, 540 ]
+<48, 48>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 87, 48, 540 ]
+<48, 48>
+[ 6, 6 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 88, 72, 360 ]
+<72, 40>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 89, 72, 360 ]
+<72, 25>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 90, 80, 324 ]
+<80, 49>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 91, 108, 240 ]
+<108, 40>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 92, 108, 240 ]
+<108, 15>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 93, 108, 240 ]
+<108, 38>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 94, 108, 240 ]
+<108, 37>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 95, 120, 216 ]
+<120, 34>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 96, 120, 216 ]
+<120, 34>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 97, 162, 160 ]
+<162, 10>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 98, 64, 405 ]
+<64, 138>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 99, 96, 270 ]
+<96, 204>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 100, 96, 270 ]
+<96, 204>
+[ 6, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 101, 96, 270 ]
+<96, 201>
+[ 2, 1 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 102, 96, 270 ]
+<96, 195>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 103, 160, 162 ]
+<160, 234>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 104, 216, 120 ]
+<216, 88>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 105, 216, 120 ]
+<216, 158>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 106, 324, 80 ]
+<324, 160>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 107, 360, 72 ]
+<360, 118>
+[ 6, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 108, 192, 135 ]
+<192, 1493>
+[ 6, 6 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 109, 192, 135 ]
+<192, 201>
+[ 2, 2 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 110, 288, 90 ]
+<288, 860>
+[ 6, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 111, 648, 40 ]
+<648, 533>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 112, 648, 40 ]
+<648, 704>
+[ 3, 3 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 113, 720, 36 ]
+<720, 763>
+[ 6, 6 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 114, 576, 45 ]
+<576, 8277>
+[ 6, 6 ]
+*******************
+for the subgroup H of label n, with [n,|H|,[G;H]] equal to
+[ 115, 960, 27 ]
+<960, 11358>
+[ 2, 2 ]
+##########################
+list the lattice of subgroups of G = PSp_4(F_3)
+##########################
+Partially ordered set of subgroup classes
+-----------------------------------------
+
+[116]  Order 25920  Length 1     Maximal Subgroups: 111 112 113 114 115
+---
+[115]  Order 960    Length 27    Maximal Subgroups: 77 102 103 109
+[114]  Order 576    Length 45    Maximal Subgroups: 73 108 109 110
+---
+[113]  Order 720    Length 36    Maximal Subgroups: 86 87 88 95 96 107
+[112]  Order 648    Length 40    Maximal Subgroups: 68 97 105 106
+[111]  Order 648    Length 40    Maximal Subgroups: 89 97 104
+[110]  Order 288    Length 45    Maximal Subgroups: 89 99 100 101
+[109]  Order 192    Length 135   Maximal Subgroups: 84 98 99
+[108]  Order 192    Length 45    Maximal Subgroups: 87 98 100
+---
+[107]  Order 360    Length 36    Maximal Subgroups: 66 67 72 77 78
+[106]  Order 324    Length 40    Maximal Subgroups: 36 79 91
+[105]  Order 216    Length 120   Maximal Subgroups: 69 88 91 93 94
+[104]  Order 216    Length 40    Maximal Subgroups: 63 92
+[103]  Order 160    Length 162   Maximal Subgroups: 25 82 90
+[102]  Order 96     Length 270   Maximal Subgroups: 69 82 83 84 86
+[101]  Order 96     Length 90    Maximal Subgroups: 63 80 85
+[100]  Order 96     Length 45    Maximal Subgroups: 61 65 80
+[ 99]  Order 96     Length 45    Maximal Subgroups: 62 64 80
+[ 98]  Order 64     Length 135   Maximal Subgroups: 80 81 82
+---
+[ 97]  Order 162    Length 160   Maximal Subgroups: 74 76 79
+[ 96]  Order 120    Length 216   Maximal Subgroups: 41 49 66 77
+[ 95]  Order 120    Length 216   Maximal Subgroups: 37 49 68 78
+[ 94]  Order 108    Length 120   Maximal Subgroups: 39 72 75
+[ 93]  Order 108    Length 120   Maximal Subgroups: 70 73 75 76
+[ 92]  Order 108    Length 120   Maximal Subgroups: 40 74
+[ 91]  Order 108    Length 40    Maximal Subgroups: 71 75
+[ 90]  Order 80     Length 162   Maximal Subgroups: 7 53
+[ 89]  Order 72     Length 360   Maximal Subgroups: 48 59 61 62 63
+[ 88]  Order 72     Length 360   Maximal Subgroups: 34 70 71 72
+[ 87]  Order 48     Length 540   Maximal Subgroups: 37 57 65 67 68
+[ 86]  Order 48     Length 270   Maximal Subgroups: 41 57 60 66
+[ 85]  Order 48     Length 270   Maximal Subgroups: 40 54 59
+[ 84]  Order 48     Length 270   Maximal Subgroups: 38 53 60 64
+[ 83]  Order 48     Length 270   Maximal Subgroups: 39 58 60
+[ 82]  Order 32     Length 405   Maximal Subgroups: 53 55 56 57 58
+[ 81]  Order 32     Length 405   Maximal Subgroups: 55 56
+[ 80]  Order 32     Length 45    Maximal Subgroups: 54 56
+---
+[ 79]  Order 81     Length 160   Maximal Subgroups: 50 51 52
+[ 78]  Order 60     Length 216   Maximal Subgroups: 17 25 36
+[ 77]  Order 60     Length 216   Maximal Subgroups: 18 25 35
+[ 76]  Order 54     Length 240   Maximal Subgroups: 43 44 45 48 50
+[ 75]  Order 54     Length 120   Maximal Subgroups: 42 46 47 50
+[ 74]  Order 54     Length 40    Maximal Subgroups: 45 51
+[ 73]  Order 36     Length 720   Maximal Subgroups: 37 38 44 47 48
+[ 72]  Order 36     Length 360   Maximal Subgroups: 13 42
+[ 71]  Order 36     Length 360   Maximal Subgroups: 41 42 46
+[ 70]  Order 36     Length 120   Maximal Subgroups: 37 42 43
+[ 69]  Order 24     Length 1080  Maximal Subgroups: 34 38 39 41
+[ 68]  Order 24     Length 540   Maximal Subgroups: 14 34 36
+[ 67]  Order 24     Length 540   Maximal Subgroups: 17 33 36
+[ 66]  Order 24     Length 540   Maximal Subgroups: 18 33 35
+[ 65]  Order 24     Length 540   Maximal Subgroups: 16 27 36
+[ 64]  Order 24     Length 540   Maximal Subgroups: 19 28 35
+[ 63]  Order 24     Length 360   Maximal Subgroups: 26 40
+[ 62]  Order 24     Length 360   Maximal Subgroups: 19 26
+[ 61]  Order 24     Length 360   Maximal Subgroups: 16 26
+[ 60]  Order 24     Length 270   Maximal Subgroups: 20 29 35
+[ 59]  Order 24     Length 90    Maximal Subgroups: 15 26
+[ 58]  Order 16     Length 810   Maximal Subgroups: 29 30 31
+[ 57]  Order 16     Length 810   Maximal Subgroups: 27 29 31 33 34
+[ 56]  Order 16     Length 405   Maximal Subgroups: 28 31
+[ 55]  Order 16     Length 405   Maximal Subgroups: 27 28 30 32
+[ 54]  Order 16     Length 270   Maximal Subgroups: 26 30 32
+[ 53]  Order 16     Length 27    Maximal Subgroups: 28 29
+---
+[ 52]  Order 27     Length 320   Maximal Subgroups: 22 24
+[ 51]  Order 27     Length 40    Maximal Subgroups: 22
+[ 50]  Order 27     Length 40    Maximal Subgroups: 21 22 23
+[ 49]  Order 20     Length 1296  Maximal Subgroups: 13 25
+[ 48]  Order 18     Length 720   Maximal Subgroups: 15 16 19 23
+[ 47]  Order 18     Length 720   Maximal Subgroups: 17 20 23
+[ 46]  Order 18     Length 720   Maximal Subgroups: 18 20 21
+[ 45]  Order 18     Length 480   Maximal Subgroups: 14 15 22
+[ 44]  Order 18     Length 240   Maximal Subgroups: 14 19 23
+[ 43]  Order 18     Length 240   Maximal Subgroups: 14 16 21
+[ 42]  Order 18     Length 120   Maximal Subgroups: 17 18 21
+[ 41]  Order 12     Length 1080  Maximal Subgroups: 12 18 20
+[ 40]  Order 12     Length 1080  Maximal Subgroups: 8 15
+[ 39]  Order 12     Length 1080  Maximal Subgroups: 13 20
+[ 38]  Order 12     Length 1080  Maximal Subgroups: 9 19 20
+[ 37]  Order 12     Length 720   Maximal Subgroups: 9 14 16 17
+[ 36]  Order 12     Length 540   Maximal Subgroups: 6 12
+[ 35]  Order 12     Length 270   Maximal Subgroups: 5 10
+[ 34]  Order 8      Length 1620  Maximal Subgroups: 9 12 13
+[ 33]  Order 8      Length 1620  Maximal Subgroups: 10 12 13
+[ 32]  Order 8      Length 810   Maximal Subgroups: 8 11
+[ 31]  Order 8      Length 810   Maximal Subgroups: 11 13
+[ 30]  Order 8      Length 405   Maximal Subgroups: 8 11
+[ 29]  Order 8      Length 270   Maximal Subgroups: 9 10 11
+[ 28]  Order 8      Length 135   Maximal Subgroups: 10 11
+[ 27]  Order 8      Length 135   Maximal Subgroups: 11 12
+[ 26]  Order 8      Length 90    Maximal Subgroups: 8
+---
+[ 25]  Order 10     Length 1296  Maximal Subgroups: 3 7
+[ 24]  Order 9      Length 960   Maximal Subgroups: 4
+[ 23]  Order 9      Length 240   Maximal Subgroups: 4 5 6
+[ 22]  Order 9      Length 160   Maximal Subgroups: 4 6
+[ 21]  Order 9      Length 120   Maximal Subgroups: 5 6
+[ 20]  Order 6      Length 1080  Maximal Subgroups: 3 5
+[ 19]  Order 6      Length 720   Maximal Subgroups: 2 5
+[ 18]  Order 6      Length 720   Maximal Subgroups: 3 5
+[ 17]  Order 6      Length 720   Maximal Subgroups: 3 6
+[ 16]  Order 6      Length 720   Maximal Subgroups: 2 6
+[ 15]  Order 6      Length 360   Maximal Subgroups: 2 4
+[ 14]  Order 6      Length 240   Maximal Subgroups: 2 6
+[ 13]  Order 4      Length 1620  Maximal Subgroups: 3
+[ 12]  Order 4      Length 540   Maximal Subgroups: 3
+[ 11]  Order 4      Length 405   Maximal Subgroups: 2 3
+[ 10]  Order 4      Length 270   Maximal Subgroups: 3
+[  9]  Order 4      Length 270   Maximal Subgroups: 2 3
+[  8]  Order 4      Length 270   Maximal Subgroups: 2
+---
+[  7]  Order 5      Length 1296  Maximal Subgroups: 1
+[  6]  Order 3      Length 240   Maximal Subgroups: 1
+[  5]  Order 3      Length 120   Maximal Subgroups: 1
+[  4]  Order 3      Length 40    Maximal Subgroups: 1
+[  3]  Order 2      Length 270   Maximal Subgroups: 1
+[  2]  Order 2      Length 45    Maximal Subgroups: 1
+---
+[  1]  Order 1      Length 1     Maximal Subgroups:
+
+##########################
+In this third computation, for every H in G, compute
+the Burnside Cokernel (if it is non-trivial) which is
+R_Q(H) modulo permutation representations. Then determine
+if V_H where V=[M tensor Q] is non-trivial in this group,
+equivalently, determine if V_H is a virtual sum of permutation
+representations of H. If not, then print a message
+##########################
+V has dimension
+61
+G has Burnside Cokernel
+Abelian Group isomorphic to Z/2
+Defined on 1 generator
+Relations:
+    2*$.1 = 0
+function(rho) ... end function [
+    [ 0, 1/2, 1/2, 1/2, 1/2, 0, 1/2, 1/2, 1/2, 0, 1/2, 0, 1/2, 0, 1/2 ]
+]
+************************
+For the subgroup H of label n then [n,[G:H]] equals
+[ 116, 1 ]
+The Burnside cokernel of H is
+Abelian Group isomorphic to Z/2
+Defined on 1 generator
+Relations:
+    2*BCH.1 = 0
+X_H is not rational if the following is false
+false
+The order of V_H in the Burnside cokernel is
+2
+************************
+For the subgroup H of label n then [n,[G:H]] equals
+[ 114, 45 ]
+<576, 8277>
+The Burnside cokernel of H is
+Abelian Group isomorphic to Z/2
+Defined on 1 generator
+Relations:
+    2*BCH.1 = 0
+X_H is not rational if the following is false
+false
+The order of V_H in the Burnside cokernel is
+2
+************************
+For the subgroup H of label n then [n,[G:H]] equals
+[ 111, 40 ]
+<648, 533>
+The Burnside cokernel of H is
+Abelian Group isomorphic to Z/2
+Defined on 1 generator
+Relations:
+    2*BCH.1 = 0
+X_H is not rational if the following is false
+false
+The order of V_H in the Burnside cokernel is
+2
+************************
+For the subgroup H of label n then [n,[G:H]] equals
+[ 110, 90 ]
+<288, 860>
+The Burnside cokernel of H is
+Abelian Group isomorphic to Z/2 + Z/2
+Defined on 2 generators
+Relations:
+    2*BCH.1 = 0
+    2*BCH.2 = 0
+X_H is not rational if the following is false
+false
+The order of V_H in the Burnside cokernel is
+2
+************************
+For the subgroup H of label n then [n,[G:H]] equals
+[ 104, 120 ]
+<216, 88>
+The Burnside cokernel of H is
+Abelian Group isomorphic to Z/2
+Defined on 1 generator
+Relations:
+    2*BCH.1 = 0
+X_H is not rational if the following is false
+false
+The order of V_H in the Burnside cokernel is
+2
+************************
+For the subgroup H of label n then [n,[G:H]] equals
+[ 101, 270 ]
+<96, 201>
+The Burnside cokernel of H is
+Abelian Group isomorphic to Z/2
+Defined on 1 generator
+Relations:
+    2*BCH.1 = 0
+X_H is not rational if the following is false
+false
+The order of V_H in the Burnside cokernel is
+2
+************************
+For the subgroup H of label n then [n,[G:H]] equals
+[ 89, 360 ]
+<72, 25>
+The Burnside cokernel of H is
+Abelian Group isomorphic to Z/2
+Defined on 1 generator
+Relations:
+    2*BCH.1 = 0
+X_H is not rational if the following is false
+false
+The order of V_H in the Burnside cokernel is
+2
+************************
+For the subgroup H of label n then [n,[G:H]] equals
+[ 63, 1080 ]
+<24, 11>
+The Burnside cokernel of H is
+Abelian Group isomorphic to Z/2
+Defined on 1 generator
+Relations:
+    2*BCH.1 = 0
+X_H is not rational if the following is false
+false
+The order of V_H in the Burnside cokernel is
+2
